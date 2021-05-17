@@ -88,6 +88,15 @@ $(document).ready(function() {
             $(".textToggledfour").slideUp();
         }
     });
+
+    // Función que muestra o esconde el boton flotante del Footer
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('.sticky-button-top').fadeIn(300);
+        } else {
+            $('.sticky-button-top').fadeOut(300);
+        }
+    });
     
     // Función que anima el scroll hacia el inicio
     $('.sticky-button-top').click(function(event) {
